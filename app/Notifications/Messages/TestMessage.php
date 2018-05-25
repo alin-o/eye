@@ -44,7 +44,7 @@ class TestMessage extends BaseMessage
     public function meta()
     {
         return [
-            'Meta' => 'is also working',
+            'Meta' => 'Meta content is also working corectly.',
         ];
     }
 

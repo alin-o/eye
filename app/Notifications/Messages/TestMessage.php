@@ -35,6 +35,18 @@ class TestMessage extends BaseMessage
     {
         return 'This is a manually generated notification to check your channel is working correctly.';
     }
+    
+    /**
+     * Any meta information for the message.
+     *
+     * @return array
+     */
+    public function meta()
+    {
+        return [
+            'Meta' => 'is also working',
+        ];
+    }
 
     /**
      * The notification typee.

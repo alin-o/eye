@@ -32,7 +32,7 @@ class Slack implements DriverInterface
             'attachments' => [[
                 'text' => $message->markupDescription(),
                 'color' => $message->isError() ? 'danger' : 'good',
-                'fields' => $message->meta()
+                'fields' => $this->parseMeta($message->meta())
             ]]
         ];
 

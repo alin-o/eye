@@ -46,23 +46,23 @@ class Slack implements DriverInterface
         }
     }
 
-       
     /**
-     * Format the meta content for Slack attachments
+     * Format the meta content for Slack attachments.
      * 
-     * @param  array  $meta  Notification meta content
+     * @param  array  $meta
      * @return array
      */
     protected function parseMeta($meta)
     {
         $fields = [];
-        foreach ($meta as $key => $value)
-        {
+        
+        foreach ($meta as $key => $value) {
             $fields[] = [
                 'title' => $key,
                 'value' => $value,
             ];
         }
+        
         return $fields;
     }
 }

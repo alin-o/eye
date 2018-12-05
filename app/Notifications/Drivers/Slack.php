@@ -27,7 +27,7 @@ class Slack implements DriverInterface
 
         $body = [
             'text' => $message->title(),
-            'icon_url' => 'https://eyewitness.io/img/logo/icon_192_192.png',
+            'icon_url' => 'icon_url' => config('logging.channels.slack.emoji_' . ($message->isError() ? 'danger' : 'good') , '/static/emoji/1f441.png'),
             'username' => 'Eyewitness.io | '.config('app.name', 'Your Application'),
             'attachments' => [[
                 'text' => $message->markupDescription(),

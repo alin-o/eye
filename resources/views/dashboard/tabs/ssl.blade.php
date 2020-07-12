@@ -102,6 +102,7 @@
                             </div>
                         </div>
                     </div>
+                    @if(isset($ssl->record['results_url']))
                     <div class="pl-1 pb-3 pt-3">
                         <div class="flex">
                             <div class="w-1/2 md:w-1/4 text-right">
@@ -112,6 +113,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                 </div>
             @else
                 <div class="text-center py-8">
